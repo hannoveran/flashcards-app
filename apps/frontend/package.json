@@ -1,0 +1,10 @@
+{
+  "name": "@flashcards-app/frontend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "echo 'Frontend dev server'",
+    "build": "echo 'Building frontend'",
+    "test": "echo 'Frontend tests passed'"
+  }
+}

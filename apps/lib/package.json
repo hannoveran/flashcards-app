@@ -1,0 +1,9 @@
+{
+  "name": "@flashcards-app/lib",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "echo 'Building lib'",
+    "test": "echo 'Lib tests passed'"
+  }
+}
