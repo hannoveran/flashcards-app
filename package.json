@@ -1,6 +1,7 @@
 {
   "name": "flashcards-app",
   "version": "1.0.0",
+  "type": "module",
   "private": true,
   "workspaces": [
     "apps/frontend",
@@ -19,6 +20,8 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.37.0",
+    "@types/express": "^5.0.5",
+    "@types/node": "^24.9.2",
     "@typescript-eslint/eslint-plugin": "^8.46.0",
     "@typescript-eslint/parser": "^8.46.0",
     "eslint": "^9.37.0",
@@ -29,7 +32,10 @@
     "globals": "^16.4.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.4",
+    "nodemon": "^3.1.10",
     "prettier": "^3.6.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3",
     "typescript-eslint": "^8.46.0"
   },
   "lint-staged": {
@@ -40,5 +46,8 @@
     "*.{json,css,md}": [
       "prettier --write"
     ]
+  },
+  "dependencies": {
+    "express": "^5.1.0"
   }
 }

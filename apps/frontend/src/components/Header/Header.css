@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2vh 1vw;
+  background-image: linear-gradient(to right, var(--teal), var(--blue));
+  border-bottom: 4px solid var(--border-color);
+}
+
+.FolderIconLogo {
+  border: 4px solid var(--border-color);
+  background-color: var(--pink);
+  height: 60px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  width: 40vw;
+  height: 5vh;
+  margin: 3vh 20vw;
+}

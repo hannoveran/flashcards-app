@@ -4,9 +4,8 @@ import tseslint from 'typescript-eslint';
 import pluginReact from 'eslint-plugin-react';
 import prettierPlugin from 'eslint-plugin-prettier';
 import prettierConfig from 'eslint-config-prettier';
-import { defineConfig } from 'eslint/config';
 
-export default defineConfig([
+export default [
   {
     ignores: [
       '**/node_modules/**',
@@ -15,12 +14,13 @@ export default defineConfig([
       '**/coverage/**',
     ],
   },
+  js.configs.recommended,
+  ...tseslint.configs.recommended,
   {
-    files: ['**/*.{js,mjs,cjs,ts,tsx,jsx}', 'apps/**/*.{js,jsx,ts,tsx}'],
-    plugins: {
-      prettier: prettierPlugin,
-    },
+    files: ['**/*.{js,mjs,cjs,ts,tsx,jsx}'],
+    ...pluginReact.configs.flat.recommended,
     languageOptions: {
+      ...pluginReact.configs.flat.recommended.languageOptions,
       globals: {
         ...globals.browser,
         ...globals.node,
@@ -33,12 +33,16 @@ export default defineConfig([
         version: 'detect',
       },
     },
+    plugins: {
+      react: pluginReact,
+      prettier: prettierPlugin,
+    },
     rules: {
+      ...pluginReact.configs.flat.recommended.rules,
+      'react/react-in-jsx-scope': 'off',
+      'react/jsx-uses-react': 'off',
       'prettier/prettier': 'error',
     },
   },
-  js.configs.recommended,
-  ...tseslint.configs.recommended,
-  pluginReact.configs.flat.recommended,
   prettierConfig,
-]);
+];

@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-image: linear-gradient(45deg, var(--blue), var(--teal));
+  border-bottom: 4px solid var(--border-color);
+}
+
+button {
+  background-color: white;
+  border: 2px solid var(--border-color);
+  padding: 1vh 2vw;
+}
+
+.FolderBanner {
+  color: white;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-lighter);
+  -webkit-background-clip: text;
+  text-shadow: none;
+  filter: drop-shadow(3px 3px 0px #2a2a2a);
+}
