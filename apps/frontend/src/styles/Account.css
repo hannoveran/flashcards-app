@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.accountNavbar {
+  display: flex;
+  justify-content: flex-start;
+  background-image: linear-gradient(45deg, var(--pink), var(--orange));
+  border-bottom: 4px solid var(--border-color);
+  padding: 2vh 2vw;
+}
+
+.accountNavbar .BackButton,
+.accountNavbar .AccountButton {
+  background-color: white;
+  border: 2px solid var(--border-color);
+  padding: 5px 2vw;
+}
+
+.accountNavbar .FolderBanner {
+  color: white;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-lighter);
+  -webkit-background-clip: text;
+  text-shadow: none;
+  filter: drop-shadow(3px 3px 0px #2a2a2a);
+  margin-left: 35vw;
+}
+
+.accountMain {
+  display: flex;
+  gap: 2vw;
+  margin: 5vh 5vw;
+  justify-content: center;
+}
+
+.leftContainer,
+.rightContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+}
+
+.leftContainer {
+  width: 25vw;
+}
+
+.rightContainer {
+  width: 55vw;
+}
+
+.profileContainer {
+  height: 70vh;
+  border: 4px solid var(--border-color);
+}
+
+.achievementsContainer {
+  height: 70vh;
+  border: 4px solid var(--border-color);
+}
+
+.statisticsContainer {
+  height: 30vh;
+  border: 4px solid var(--border-color);
+}
+
+.profileSettingsContainer {
+  height: 50vh;
+  border: 4px solid var(--border-color);
+}
+
+.appPreferencesContainer {
+  height: 70vh;
+  border: 4px solid var(--border-color);
+}

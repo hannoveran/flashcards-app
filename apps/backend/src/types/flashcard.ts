@@ -4,7 +4,7 @@ export interface Flashcard {
   answer: string;
 }
 
-export interface FlashcardSet {
+export interface Deck {
   id: number;
   title: string;
   description: string;

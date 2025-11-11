@@ -1,16 +1,23 @@
 import express from 'express';
 import cors from 'cors';
-import flashcardsRoutes from './routes/flashcards.routes';
+import dotenv from 'dotenv';
+import decksRoutes from './routes/decks.routes';
+import './db/connection';
+
+dotenv.config();
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 
-app.use('/api', flashcardsRoutes);
+app.use('/api', decksRoutes);
 
 app.get('/', (_, res) => {
-  res.send('Backend is running');
+  res.send('Backend is running with PostgreSQL! 🚀');
 });
 
-app.listen(5000, () => console.log('Server running on http://localhost:5000'));
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () =>
+  console.log(`🚀 Server running on http://localhost:${PORT}`),
+);

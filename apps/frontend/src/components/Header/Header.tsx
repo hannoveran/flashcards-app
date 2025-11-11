@@ -1,5 +1,6 @@
 import './Header.css';
 import FolderIcon from '../FolderIcon/FolderIcon.tsx';
+import { Link } from 'react-router-dom';
 
 function Header() {
   return (
@@ -9,7 +10,9 @@ function Header() {
           <FolderIcon size={36} color="#fff" />
         </div>
         <input type="text" />
-        <button>Account</button>
+        <Link to={'/account'}>
+          <button className="AccountButton">Account</button>
+        </Link>
       </div>
     </section>
   );
