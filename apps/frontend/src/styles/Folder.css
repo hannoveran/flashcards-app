@@ -45,11 +45,18 @@
 }
 
 .buttonContainer button {
-  background-image: linear-gradient(45deg, var(--teal), var(--blue));
   border: 2px solid var(--border-color);
   color: white;
   margin: 2vh 2vw;
   padding: 1vh 2vw;
+}
+
+.addNewFolder {
+  background-image: linear-gradient(45deg, var(--pink), var(--blue));
+}
+
+.addNewDeck {
+  background-image: linear-gradient(45deg, var(--teal), var(--blue));
 }
 
 .deckContainer {

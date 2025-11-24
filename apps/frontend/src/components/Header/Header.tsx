@@ -9,7 +9,12 @@ function Header() {
         <div className="FolderIconLogo">
           <FolderIcon size={36} color="#fff" />
         </div>
-        <input type="text" />
+        <Link to={'/login'}>
+          <button className="AccountButton">Login</button>
+        </Link>
+        <Link to={'/register'}>
+          <button className="AccountButton">Register</button>
+        </Link>
         <Link to={'/account'}>
           <button className="AccountButton">Account</button>
         </Link>

@@ -1,0 +1,287 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.studyPage {
+  min-height: 100vh;
+  background-image: repeating-linear-gradient(
+    0deg,
+    #2c3636 0px,
+    #2c3636 2px,
+    #091313 2px,
+    #091313 4px
+  );
+}
+
+.studyPageNavbar {
+  display: flex;
+  border-bottom: 4px solid var(--border-color);
+  background-image: linear-gradient(45deg, #2a2a2a, #4a4a4a);
+  padding: 2vh 0;
+}
+
+.exitStudyButton {
+  background-color: #5cc9c9;
+  border: 2px solid white;
+  color: white;
+  padding: 1vh 2vw;
+  margin-left: 2vw;
+}
+
+.studyPageNavbar span {
+  margin: auto;
+  color: #5cc9c9;
+  text-shadow: 0 0 10px #5cc9c9;
+}
+
+.studyPageMain {
+  display: flex;
+  flex-direction: column;
+}
+
+.progressBarContainer {
+  margin: auto;
+}
+
+.restartContainer {
+  color: #5cc9c9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40vw;
+  margin-top: 5vh;
+}
+
+.restartContainer button {
+  color: #5cc9c9;
+  border: 2px solid #5cc9c9;
+  padding: 1vh 2vw;
+}
+
+.progressBar {
+  border: 2px solid #5cc9c9;
+  height: 2.5vh;
+  background-image: linear-gradient(45deg, #5cc9c9, #ff6b9d);
+  margin-top: 2vh;
+}
+
+.computerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55vw;
+  height: 65vh;
+  margin: auto;
+  margin-top: 3vh;
+  border: 7px solid #313232;
+  background-color: #383939;
+  border-radius: 20px;
+  color: #5cc9c9;
+}
+
+.computerInnerContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 50vw;
+  height: 55vh;
+}
+
+.greenScreen {
+  display: flex;
+  border: 3px solid #313232;
+  background-color: radial-gradient(
+    ellipse at center,
+    rgba(92, 201, 201, 0.1) 0%,
+    transparent 70%
+  );
+  width: 50vw;
+  height: 45vh;
+}
+
+.blackBlock {
+  border: 4px solid #091313;
+  background-color: #282e2e;
+  margin-top: 3vh;
+  width: 8vw;
+  height: 5vh;
+}
+
+.bottomButtons {
+  display: flex;
+  gap: 2vw;
+  justify-content: center;
+  margin-top: 4vh;
+}
+
+.bottomButtons button {
+  color: white;
+  padding: 2vh 3vw;
+}
+
+.previousButton {
+  background-color: #5cc9c9;
+}
+
+.flipButton {
+  background-image: linear-gradient(135deg, var(--pink), var(--orange));
+}
+
+.nextButton {
+  background-color: #7ca5d6;
+}
+
+.progressBarWrapper {
+  width: 60vw;
+  height: 2.5vh;
+  border: 2px solid #5cc9c9;
+  background-color: #091313;
+  margin-top: 2vh;
+  overflow: hidden;
+}
+
+.progressBar {
+  height: 100%;
+  background-image: linear-gradient(135deg, #5cc9c9, #ff6b9d);
+  transition: width 0.3s ease;
+}
+
+.greenScreen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem;
+  position: relative;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(92, 201, 201, 0.15) 0%,
+    rgba(9, 19, 19, 0.8) 70%
+  );
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.cardLabel {
+  margin-bottom: 2rem;
+}
+
+.cardLabel span {
+  color: #5cc9c9;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-shadow: 0 0 10px #5cc9c9;
+}
+
+.cardText {
+  color: #5cc9c9;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 0 0 15px rgba(92, 201, 201, 0.7);
+  max-width: 90%;
+  word-wrap: break-word;
+}
+
+.clickToFlipSpan {
+  position: absolute;
+  bottom: 2rem;
+  animation: blink 1.5s infinite;
+}
+
+.clickToFlipSpan span {
+  color: #5cc9c9;
+  font-size: 0.9rem;
+  text-shadow: 0 0 5px #5cc9c9;
+}
+
+@keyframes blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.bottomButtons button:disabled {
+  cursor: not-allowed;
+}
+
+.completionContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  margin-top: 5vh;
+}
+
+.completionMessage {
+  text-align: center;
+  color: #5cc9c9;
+  padding: 3rem;
+  border: 3px solid #5cc9c9;
+  border-radius: 20px;
+  background-color: rgba(9, 19, 19, 0.8);
+}
+
+.completionTitle {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 20px #5cc9c9;
+  animation: glow 2s infinite;
+}
+
+.completionSubtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.completionButtons {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.restartButton {
+  background-color: #5cc9c9;
+  color: white;
+  padding: 1.5vh 3vw;
+  border: 2px solid white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.exitButton {
+  background-color: #7ca5d6;
+  color: white;
+  padding: 1.5vh 3vw;
+  border: 2px solid white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    text-shadow:
+      0 0 20px #5cc9c9,
+      0 0 30px #5cc9c9;
+  }
+  50% {
+    text-shadow:
+      0 0 30px #ff6b9d,
+      0 0 40px #ff6b9d;
+  }
+}

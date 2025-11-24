@@ -1,0 +1,32 @@
+.new-folder-dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 600px;
+  width: 90%;
+  height: 70%;
+  padding: 2rem;
+  border-radius: var(--radius);
+  border: 4px solid var(--border-color);
+  background-color: var(--beige);
+}
+
+.new-folder-dialog h2 {
+  margin-bottom: 1rem;
+  color: var(--dark);
+}
+
+.folder-name-form {
+  margin-bottom: 1.5rem;
+  padding: 3vh 1vw;
+  border: 2px solid var(--border-color);
+}
+
+.folder-name-form input {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}

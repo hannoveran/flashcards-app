@@ -1,14 +1,12 @@
-import axios from 'axios';
-
-const API_URL = 'http://localhost:5000/api';
+import { apiClient } from './client';
 
 export async function getDecks() {
-  const res = await axios.get(`${API_URL}/decks`);
+  const res = await apiClient.get('/decks');
   return res.data;
 }
 
 export async function createDeck(title: string, description?: string) {
-  const res = await axios.post(`${API_URL}/decks`, {
+  const res = await apiClient.post('/decks', {
     title,
     description: description || '',
   });
@@ -20,20 +18,20 @@ export async function editDeck(
   title: string,
   description?: string,
 ) {
-  const res = await axios.put(`${API_URL}/decks/${id}`, {
+  const res = await apiClient.put(`/decks/${id}`, {
     title,
-    description,
+    description: description || '',
   });
   return res.data;
 }
 
 export async function deleteDecks(id: number) {
-  const res = await axios.delete(`${API_URL}/decks/${id}`);
+  const res = await apiClient.delete(`/decks/${id}`);
   return res.data;
 }
 
 export async function getDeckCards(deckId: number) {
-  const res = await axios.get(`${API_URL}/decks/${deckId}/cards`);
+  const res = await apiClient.get(`/decks/${deckId}/cards`);
   return res.data;
 }
 
@@ -42,7 +40,7 @@ export async function addCardToDeck(
   front: string,
   back: string,
 ) {
-  const res = await axios.post(`${API_URL}/decks/${deckId}/cards`, {
+  const res = await apiClient.post(`/decks/${deckId}/cards`, {
     term: front,
     definition: back,
   });
@@ -50,6 +48,6 @@ export async function addCardToDeck(
 }
 
 export async function deleteCardFromDeck(deckId: number, cardId: number) {
-  const res = await axios.delete(`${API_URL}/decks/${deckId}/cards/${cardId}`);
+  const res = await apiClient.delete(`/decks/${deckId}/cards/${cardId}`);
   return res.data;
 }

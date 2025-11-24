@@ -1,14 +1,17 @@
 import { Router } from 'express';
 import * as DeckModel from '../models/deck.model';
 import * as CardModel from '../models/card.model';
+import { authMiddleware, AuthRequest } from '../middleware/auth.middleware';
 
 const router = Router();
 
-// Отримати всі колоди
-router.get('/decks', async (_req, res) => {
+router.use(authMiddleware);
+
+// Отримати всі колоди користувача
+router.get('/decks', async (_req: AuthRequest, res) => {
   try {
-    const decks = await DeckModel.getAllDecks();
-    res.json(decks);
+    const result = await DeckModel.getAllDecks();
+    res.json(result);
   } catch (error) {
     console.error('Error fetching decks:', error);
     res.status(500).json({ error: `Error fetching decks: ${error}` });
