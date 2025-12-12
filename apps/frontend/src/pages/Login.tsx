@@ -18,7 +18,7 @@ function Login() {
     try {
       const data = await login(email, password);
       saveToken(data.token);
-      navigate('/folders');
+      navigate('/folder');
     } catch (err) {
       setError('Invalid email or password');
       console.error('Login error:', err);

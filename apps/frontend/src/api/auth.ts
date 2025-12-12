@@ -12,11 +12,23 @@ export async function register(
     email,
     password,
   });
+
+  const token = res.data.token;
+  saveToken(token);
+
+  axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+
   return res.data;
 }
 
 export async function login(email: string, password: string) {
   const res = await axios.post(`${API_URL}/login`, { email, password });
+
+  const token = res.data.token;
+  saveToken(token);
+
+  axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+
   return res.data;
 }
 
@@ -40,7 +52,6 @@ export async function updateProfile(
   return res.data;
 }
 
-// Helpers для localStorage
 export function saveToken(token: string) {
   localStorage.setItem('token', token);
 }
@@ -51,6 +62,7 @@ export function getToken(): string | null {
 
 export function removeToken() {
   localStorage.removeItem('token');
+  delete axios.defaults.headers.common['Authorization'];
 }
 
 export function isAuthenticated(): boolean {

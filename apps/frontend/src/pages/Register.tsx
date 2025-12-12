@@ -31,7 +31,7 @@ function Register() {
     try {
       const data = await register(username, email, password);
       saveToken(data.token);
-      navigate('/folders');
+      navigate('/folder');
     } catch (err) {
       setError('Registration failed. Email may already be in use.');
       console.error('Register error:', err);

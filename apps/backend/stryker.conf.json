@@ -1,0 +1,20 @@
+{
+  "packageManager": "npm",
+  "reporters": ["clear-text", "html", "progress"],
+  "testRunner": "command",
+  "commandRunner": {
+    "command": "npx jest src/tests/deck.model.test.ts --testTimeout=60000 --forceExit"
+  },
+  "coverageAnalysis": "off",
+  "mutate": ["src/models/deck.model.ts"],
+  "ignorePatterns": ["src/tests/**", "dist/**", "node_modules/**"],
+  "thresholds": {
+    "high": 80,
+    "low": 60,
+    "break": 0
+  },
+  "timeoutMS": 120000,
+  "concurrency": 1,
+  "tempDirName": "stryker-tmp",
+  "cleanTempDir": true
+}
