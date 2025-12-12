@@ -1,6 +1,5 @@
-const fs = require('fs');
-const { execSync } = require('child_process');
-const path = require('path');
+const fs = 'fs';
+const { execSync } = 'child_process';
 
 const colors = {
   reset: '\x1b[0m',
@@ -157,7 +156,7 @@ mutations.forEach((mutation, index) => {
       results.push({ ...mutation, status: 'survived' });
     } catch (error) {
       console.log(
-        `  ${colors.green} KILLED - Tests caught the mutation!${colors.reset}\n`,
+        `${error}  ${colors.green} KILLED - Tests caught the mutation!${colors.reset}\n`,
       );
       killed++;
       results.push({ ...mutation, status: 'killed' });
