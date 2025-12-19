@@ -13,7 +13,8 @@
     "test:watch": "cross-env NODE_ENV=test jest --watch",
     "test:coverage": "cross-env NODE_ENV=test jest --coverage --detectOpenHandles --forceExit",
     "test:mutation": "node mutation-test.js",
-    "test:mutation:report": "start reports/mutation/html/index.html"
+    "test:mutation:report": "start reports/mutation/html/index.html",
+    "lint": "eslint ."
   },
   "dependencies": {
     "bcrypt": "^6.0.0",
