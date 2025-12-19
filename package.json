@@ -22,7 +22,7 @@
     "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,json,css,md}\"",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "prepare": "husky",
+    "prepare": "node -e \"if (process.env.NODE_ENV !== 'production') require('husky').install()\"",
     "lint:backend": "npm run lint --prefix apps/backend",
     "lint:frontend": "npm run lint --prefix apps/frontend",
     "build:backend": "npm run build --prefix apps/backend",
