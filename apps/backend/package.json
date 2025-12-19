@@ -7,7 +7,7 @@
     "build": "tsc",
     "start": "node dist/index.js",
     "clean": "rm -rf dist",
-    "test": "cross-env NODE_ENV=test jest --detectOpenHandles --forceExit",
+    "test": "npm run test:unit",
     "test:unit": "cross-env NODE_ENV=test jest src/tests/deck.model.test.ts --detectOpenHandles --forceExit",
     "test:int": "cross-env NODE_ENV=test jest src/tests/decks.int.test.ts --detectOpenHandles --forceExit",
     "test:watch": "cross-env NODE_ENV=test jest --watch",
